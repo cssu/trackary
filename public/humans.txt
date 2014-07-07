@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Eugene Cheung -- Web Developer & Designer -- @arkon
+    Spencer Elliott -- Web Developer & DevOps -- @spe_
+
+# TECHNOLOGY COLOPHON
+
+    Ruby on Rails 4, Dokku on DigitalOcean,
+    HTML5, CSS3, jQuery

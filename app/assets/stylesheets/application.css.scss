@@ -1,0 +1,34 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+//noinspection SassScssUnresolvedFunction
+@font-face {
+  font-family: "Myriad Pro Condensed";
+  src: font-url('MyriadPro-Cond.eot');
+  src: font-url('MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+  font-url('MyriadPro-Cond.woff') format('woff'),
+  font-url('MyriadPro-Cond.ttf') format('truetype'),
+  font-url('MyriadPro-Cond.svg#webfont') format('svg');
+}
+
+//noinspection SassScssUnresolvedFunction
+@font-face {
+  font-family: "Proxima Nova";
+  src: font-url('proximanova-regular-webfont.eot');
+  src: font-url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('proximanova-regular-webfont.woff') format('woff'),
+  font-url('proximanova-regular-webfont.ttf') format('truetype'),
+  font-url('proximanova-regular-webfont.svg#webfont') format('svg');
+}
