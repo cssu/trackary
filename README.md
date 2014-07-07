@@ -1,11 +1,11 @@
-cssu.ca
-=======
+trackary
+========
 
-University of Toronto Computer Science Student Union Website
+Inventory tracking & point-of-sale for the CSSU
 
 ### Overview
 
-This is a Ruby on Rails app which hosts the website for the CSSU
+This is a Ruby on Rails app.
 
 ### Development
 
@@ -21,7 +21,7 @@ You need the following prerequisutes:
 
 The rest of the dependencies can be installed by running:
 
-    cd cssu.ca/
+    cd trackary/
     bundle install
 
 Start a local test server by running:
@@ -40,19 +40,19 @@ We're using [Dokku](https://github.com/progrium/dokku) to deploy the website to 
 To add your public key to the server, send it to the `sshcommand` command on the server.
 Assuming your public key is in `~/.ssh/id_rsa.pub`:
 
-    cat ~/.ssh/id_rsa.pub | ssh root@cssu.ca "sshcommand acl-add dokku <name>"
+    cat ~/.ssh/id_rsa.pub | ssh root@trackary.cssu.ca "sshcommand acl-add dokku <name>"
 
 (Where `<name>` is any label you want for the key, probably your name)
 
 Once your public ssh key has been added to Dokku, add the remote:
 
-    git remote add staging dokku@cssu.ca:staging
+    git remote add staging dokku@trackary.cssu.ca:staging
 
 Then, whenever you want to deploy, simply:
 
     git push staging master
 
-The site is live at <http://staging.cssu.ca>
+The site is live at <http://staging.trackary.cssu.ca>
 
 On the server, PostgreSQL is used as the database. See [dokku-pg-plugin](https://github.com/Kloadut/dokku-pg-plugin).
 
@@ -60,15 +60,6 @@ On the server, PostgreSQL is used as the database. See [dokku-pg-plugin](https:/
 
 Follow the same instructions as above, but use the following remote:
 
-    git remote add production dokku@cssu.ca:cssu.ca
+    git remote add production dokku@trackary.cssu.ca:trackary.cssu.ca
 
-The site isn't live at <https://cssu.ca>
-
-##### Redirecting www.cssu.ca to cssu.ca
-
-Add the following nginx configuration file to the server as `/etc/nginx/conf.d/www.conf`:
-
-    server {
-        server_name www.cssu.ca;
-        return 301 $scheme://cssu.ca$request_uri;
-    }
+The site is live at <https://trackary.cssu.ca>
