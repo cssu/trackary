@@ -5,11 +5,14 @@ Inventory tracking & point-of-sale for the CSSU
 
 ### Overview
 
-This is a Ruby on Rails app.
+This is a Ruby on Rails app, consisting of four main components:
+
+- A storefront: a public page where users can browse items sold by the CSSU, with the price, the number of items in stock, and the amount of reward points required to redeem each item.
+- A customer portal: customers can log in to view their purchase history and reward points.
+- A point-of-sale activity: CSSU execs can log in and sell items (snacks/drinks/merchandise) to customers by selecting one or more items and processing the payment. The customer has the option of providing their UTORid to collect reward points.
+- An administration activity: CSSU execs with enough authorization can log in to view transaction history, manage users, edit the types of items sold by the CSSU, and adjust stock levels.
 
 ### Development
-
-*Note: This has only been tested on OS X 10.9.2, 10.9.3*
 
 You need the following prerequisutes:
 
