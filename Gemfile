@@ -77,3 +77,9 @@ gem 'rails_config'
 
 # Use MetaTags for search engine optimization
 gem 'meta-tags'
+
+# Use devise for authentication
+gem 'devise'
+
+# Use CanCan for authorization
+gem 'cancan'
