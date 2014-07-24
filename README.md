@@ -43,19 +43,19 @@ We're using [Dokku](https://github.com/progrium/dokku) to deploy the website to 
 To add your public key to the server, send it to the `sshcommand` command on the server.
 Assuming your public key is in `~/.ssh/id_rsa.pub`:
 
-    cat ~/.ssh/id_rsa.pub | ssh root@trackary.cssu.ca "sshcommand acl-add dokku <name>"
+    cat ~/.ssh/id_rsa.pub | ssh root@trackary.com "sshcommand acl-add dokku <name>"
 
 (Where `<name>` is any label you want for the key, probably your name)
 
 Once your public ssh key has been added to Dokku, add the remote:
 
-    git remote add staging dokku@trackary.cssu.ca:staging
+    git remote add staging dokku@trackary.com:staging
 
 Then, whenever you want to deploy, simply:
 
     git push staging master
 
-The site is live at <http://staging.trackary.cssu.ca>
+The site is live at <http://staging.trackary.com>
 
 On the server, PostgreSQL is used as the database. See [dokku-pg-plugin](https://github.com/Kloadut/dokku-pg-plugin).
 
@@ -63,6 +63,6 @@ On the server, PostgreSQL is used as the database. See [dokku-pg-plugin](https:/
 
 Follow the same instructions as above, but use the following remote:
 
-    git remote add production dokku@trackary.cssu.ca:trackary.cssu.ca
+    git remote add production dokku@trackary.com:trackary.com
 
-The site is live at <https://trackary.cssu.ca>
+The site is live at <https://trackary.com>
