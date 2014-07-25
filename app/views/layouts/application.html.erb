@@ -19,6 +19,10 @@
 
   <%# Include styles from 'application.css' and controller-specific styles %>
   <%= stylesheet_link_tag 'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
+
+  <%# Import the 'application' html component #>
+  <%= html_import_tag "application", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
 
   <%# Google fonts %>
@@ -28,9 +32,6 @@
 
   <%# Yield the content %>
   <%= yield %>
-
-  <%# Footer partial %>
-  <%= render 'layouts/footer' %>
 
   <%# Include javascripts from 'application.js' and controller-specific scripts %>
   <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
