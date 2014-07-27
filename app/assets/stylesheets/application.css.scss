@@ -16,7 +16,7 @@
 @import 'bourbon';
 
 /* Define fonts */
-@include font-face('Myriad Pro Condensed', 'MyriadPro-Cond', $asset-pipeline: true);
+// @include font-face(MyriadProCondensed, 'MyriadPro-Cond', $asset-pipeline: true);
 
 * {
   font-family: sans-serif;
