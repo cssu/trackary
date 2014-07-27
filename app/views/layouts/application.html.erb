@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
 <html>
 <head>
   <meta charset="utf-8">
@@ -20,6 +21,9 @@
   <%# Include styles from 'application.css' and controller-specific styles %>
   <%= stylesheet_link_tag 'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
 
+  <%# Include javascripts from 'application.js' and controller-specific scripts %>
+  <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
+
   <%# Import the 'application' html component %>
   <%= html_import_tag "application", "data-turbolinks-track" => true %>
 
@@ -28,13 +32,10 @@
   <%# Google fonts %>
   <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body unresolved touch-action="auto" fullbleed layout vertical>
 
   <%# Yield the content %>
   <%= yield %>
-
-  <%# Include javascripts from 'application.js' and controller-specific scripts %>
-  <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
 
   <%# Google Analytics %>
   <% if Rails.env.production? %>

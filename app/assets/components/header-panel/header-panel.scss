@@ -1,0 +1,19 @@
+@import 'macros';
+
+//noinspection CssInvalidPseudoSelector
+:host {
+  display: block;
+  position: relative;
+}
+
+core-header-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+core-toolbar {
+  background-color: $primary-color-base;
+}
