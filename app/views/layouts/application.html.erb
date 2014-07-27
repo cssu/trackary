@@ -10,7 +10,7 @@
 
   <meta name="description" content="The University of Toronto Computer Science Student Union">
 
-  <title>Computer Science Student Union</title>
+  <title>Trackary</title>
 
   <%# favicon & social media images %>
   <%= favicon_link_tag 'favicon.ico' %>
@@ -20,7 +20,7 @@
   <%# Include styles from 'application.css' and controller-specific styles %>
   <%= stylesheet_link_tag 'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
 
-  <%# Import the 'application' html component #>
+  <%# Import the 'application' html component %>
   <%= html_import_tag "application", "data-turbolinks-track" => true %>
 
   <%= csrf_meta_tags %>
@@ -37,14 +37,14 @@
   <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
 
   <%# Google Analytics %>
-  <% unless Settings.ga_tracking_id.blank? %>
+  <% if Rails.env.production? %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '<%= Settings.ga_tracking_id %>', 'uofthacks.com');
+      ga('create', '<%= Rails.configuration.ga_tracking_id %>', 'uofthacks.com');
       ga('require', 'displayfeatures');
       ga('require', 'linkid', 'linkid.js');
       ga('send', 'pageview');

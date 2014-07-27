@@ -12,23 +12,3 @@
  *
  *= require_self
  */
-
-//noinspection SassScssUnresolvedFunction
-@font-face {
-  font-family: "Myriad Pro Condensed";
-  src: font-url('MyriadPro-Cond.eot');
-  src: font-url('MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
-  font-url('MyriadPro-Cond.woff') format('woff'),
-  font-url('MyriadPro-Cond.ttf') format('truetype'),
-  font-url('MyriadPro-Cond.svg#webfont') format('svg');
-}
-
-//noinspection SassScssUnresolvedFunction
-@font-face {
-  font-family: "Proxima Nova";
-  src: font-url('proximanova-regular-webfont.eot');
-  src: font-url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  font-url('proximanova-regular-webfont.woff') format('woff'),
-  font-url('proximanova-regular-webfont.ttf') format('truetype'),
-  font-url('proximanova-regular-webfont.svg#webfont') format('svg');
-}
