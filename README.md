@@ -12,6 +12,13 @@ This is a Ruby on Rails app, consisting of four main components:
 - A point-of-sale activity: CSSU execs can log in and sell items (snacks/drinks/merchandise) to customers by selecting one or more items and processing the payment. The customer has the option of providing their UTORid to collect reward points.
 - An administration activity: CSSU execs with enough authorization can log in to view transaction history, manage users, edit the types of items sold by the CSSU, and adjust stock levels.
 
+### Useful links
+
+- [Polymer developer guide](http://www.polymer-project.org/docs/polymer/polymer.html)
+- [Polymer core elements](http://www.polymer-project.org/docs/elements/core-elements.html)
+- [Polymer icon set](http://www.polymer-project.org/components/core-icons/demo.html)
+- [Material design color](http://www.google.com/design/spec/style/color.html)
+
 ### Development
 
 You need the following prerequisutes:
