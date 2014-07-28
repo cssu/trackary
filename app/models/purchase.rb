@@ -1,4 +1,4 @@
 class Purchase < ActiveRecord::Base
-  belongs_to :product
-  belongs_to :transaction
+  has_many :products
+  belongs_to :customer
 end

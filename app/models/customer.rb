@@ -1,4 +1,3 @@
 class Customer < ActiveRecord::Base
-  belongs_to :user
-  has_many :transactions
+  has_many :purchases
 end
