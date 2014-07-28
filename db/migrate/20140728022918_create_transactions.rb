@@ -1,6 +1,6 @@
-class CreateOrders < ActiveRecord::Migration
+class CreateTransactions < ActiveRecord::Migration
   def change
-    create_table :orders do |t|
+    create_table :transactions do |t|
       t.references :customer, index: true
 
       t.timestamps
