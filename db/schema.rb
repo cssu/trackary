@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728015526) do
+ActiveRecord::Schema.define(version: 20140728023145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "customers", force: true do |t|
+    t.string   "name",           null: false
+    t.string   "email"
+    t.string   "student_number"
+    t.integer  "reward_points",  null: false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "customers", ["user_id"], name: "index_customers_on_user_id", using: :btree
 
   create_table "oauth_access_grants", force: true do |t|
     t.integer  "resource_owner_id", null: false
@@ -60,15 +67,43 @@ ActiveRecord::Schema.define(version: 20140728015526) do
 
   add_index "oauth_applications", ["uid"], name: "index_oauth_applications_on_uid", unique: true, using: :btree
 
-  create_table "products", force: true do |t|
+  create_table "orders", force: true do |t|
+    t.integer  "customer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "purchases", force: true do |t|
+  add_index "orders", ["customer_id"], name: "index_orders_on_customer_id", using: :btree
+
+  create_table "product_categories", force: true do |t|
+    t.string   "name",        null: false
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "price"
+    t.integer  "reward_points_cost"
+    t.integer  "product_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "products", ["product_category_id"], name: "index_products_on_product_category_id", using: :btree
+
+  create_table "purchases", force: true do |t|
+    t.integer  "quantity"
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "purchases", ["order_id"], name: "index_purchases_on_order_id", using: :btree
+  add_index "purchases", ["product_id"], name: "index_purchases_on_product_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
