@@ -86,3 +86,5 @@ gem 'devise'
 
 # Use CanCan for authorization
 gem 'cancan'
+
+gem 'doorkeeper'
