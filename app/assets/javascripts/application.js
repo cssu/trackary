@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require platform/platform
+
+Polymer('element-name', {
+  goLink: function(e) {
+    window.location.href = e.target.getAttribute('link');
+  }
+});
