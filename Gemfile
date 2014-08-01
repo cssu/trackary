@@ -88,5 +88,4 @@ gem 'devise'
 gem 'cancan'
 
 # Use doorkeeper for oauth authentication
-
 gem 'doorkeeper'
