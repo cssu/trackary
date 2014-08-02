@@ -1,0 +1,19 @@
+<!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
+<polymer-element name="main-layout" noscript>
+  <template>
+    <core-scaffold>
+      <core-header-panel navigation flex mode="waterfall">
+        <core-toolbar>Trackary</core-toolbar>
+        <core-menu>
+          <core-item icon="shopping-cart" label="Store"></core-item>
+          <core-item icon="loyalty" label="Rewards"></core-item>
+          <core-item icon="settings" label="Settings"></core-item>
+        </core-menu>
+      </core-header-panel>
+      <div tool>
+        <content select=".title"></content>
+      </div>
+      <content></content>
+    </core-scaffold>
+  </template>
+</polymer-element>

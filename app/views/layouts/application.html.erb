@@ -34,37 +34,6 @@
 </head>
 <body unresolved touch-action="auto" fullbleed layout vertical>
 
-  <%# Routes %>
-  <app-router>
-    <!-- matches an exact path -->
-    <app-route path="/home" import="/pages/home-page.html"></app-route>
-
-    <!-- matches using a wildcard -->
-    <app-route path="/customer/*" import="/pages/customer-page.html"></app-route>
-
-    <!-- matches using a path variable -->
-    <app-route path="/order/:id" import="/pages/order-page.html"></app-route>
-
-    <!-- matches a pattern like '/word/number' -->
-    <app-route path="/^\/\w+\/\d+$/i" regex import="/pages/regex-page.html"></app-route>
-
-    <!-- matches everything else -->
-    <app-route path="*" import="/pages/not-found-page.html"></app-route>
-  </app-router>
-
-  <!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
-  <core-scaffold>
-    <core-header-panel navigation flex mode="seamed">
-      <core-toolbar>Trackary</core-toolbar>
-      <core-menu>
-        <core-item icon="shopping-cart" label="Store"></core-item>
-        <core-item icon="loyalty" label="Rewards"></core-item>
-        <core-item icon="settings" label="Settings"></core-item>
-      </core-menu>
-    </core-header-panel>
-    <div tool>Login</div>
-  </core-scaffold>
-
   <%# Yield the content %>
   <%= yield %>
 

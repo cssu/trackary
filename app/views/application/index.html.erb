@@ -1,0 +1,8 @@
+<!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
+<%# Routes %>
+<app-router>
+  <app-route path="/" element="signin-register"></app-route>
+  <app-route path="/signin" element="signin"></app-route>
+  <app-route path="/register" element="register"></app-route>
+  <app-route path="*" import="/pages/not-found-page.html"></app-route>
+</app-router>
