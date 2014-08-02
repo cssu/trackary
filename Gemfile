@@ -57,6 +57,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Use High Voltage for static pages
+gem 'high_voltage'
+
 # Use emcee for web components
 gem 'emcee'
 
