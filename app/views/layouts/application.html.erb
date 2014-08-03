@@ -19,10 +19,10 @@
   <%= favicon_link_tag 'social-media-logo.png', rel: 'image_src', type: 'image/png' %>
 
   <%# Include styles from 'application.css' and controller-specific styles %>
-  <%= stylesheet_link_tag 'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%# Include javascripts from 'application.js' and controller-specific scripts %>
-  <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%# Import the 'application' html component %>
   <%= html_import_tag "application", "data-turbolinks-track" => true %>

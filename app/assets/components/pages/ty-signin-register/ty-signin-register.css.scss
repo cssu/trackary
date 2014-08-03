@@ -1,0 +1,15 @@
+@import "mixins";
+
+.button {
+  background: $primary-color-dark;
+  color: white;
+}
+
+.button:hover {
+  background: $primary-color-base;
+}
+
+//noinspection CssInvalidPseudoSelector
+.button::shadow #ripple {
+  color: $primary-color-base;
+}

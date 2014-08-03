@@ -14,23 +14,11 @@
  */
 
 @import 'bourbon';
+@import 'mixins';
 
 /* Define fonts */
 // @include font-face(MyriadProCondensed, 'MyriadPro-Cond', $asset-pipeline: true);
 
 * {
   font-family: sans-serif;
-}
-
-#my-button {
-    background: #4285f4;
-    color: #fff;
-}
-
-#my-button:hover {
-    background: #2a56c6;
-}
-
-#my-button::shadow #ripple {
-    color: #2a56c6;
 }
