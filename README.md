@@ -16,6 +16,7 @@ This is a Ruby on Rails app, consisting of four main components:
 
 - [Polymer developer guide](http://www.polymer-project.org/docs/polymer/polymer.html)
 - [Polymer core elements](http://www.polymer-project.org/docs/elements/core-elements.html)
+- [Using core icons](http://www.polymer-project.org/docs/elements/icons.html)
 - [Polymer icon set](http://www.polymer-project.org/components/core-icons/demo.html)
 - [Material design color](http://www.google.com/design/spec/style/color.html)
 
