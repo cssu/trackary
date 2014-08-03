@@ -1,4 +1,10 @@
-@import "mixins";
+@import 'mixins';
+@import 'bourbon';
+
+.container {
+  margin: 5em auto;
+  max-width: 20em;
+}
 
 .button {
   background: $primary-color-dark;
@@ -11,5 +17,14 @@
 
 //noinspection CssInvalidPseudoSelector
 .button::shadow #ripple {
+  color: $primary-color-light;
+}
+
+paper-input {
+  width: auto;
+}
+
+paper-input::shadow .focusedColor {
   color: $primary-color-base;
+  background-color: $primary-color-base;
 }
