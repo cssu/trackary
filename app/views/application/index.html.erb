@@ -1,8 +1,10 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
 <%# Routes %>
 <app-router>
-  <app-route path="/" element="signin-register"></app-route>
-  <app-route path="/signin" element="signin"></app-route>
-  <app-route path="/register" element="register"></app-route>
-  <app-route path="*" import="/pages/not-found-page.html"></app-route>
+  <app-route path="/" element="ty-signin-register"></app-route>
+  <app-route path="/store" element="ty-store"></app-route>
+  <app-route path="/signin" element="ty-signin"></app-route>
+  <app-route path="/register" element="ty-register"></app-route>
+  <app-route path="/settings" element="ty-settings"></app-route>
+  <app-route path="*" element="ty-signin-register"></app-route>
 </app-router>

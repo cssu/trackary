@@ -1,0 +1,25 @@
+<!--suppress HtmlUnknownAttribute, HtmlUnknownTag, HtmlUnknownAnchorTarget -->
+<polymer-element name="main-layout" noscript>
+  <template>
+    <core-scaffold>
+      <core-header-panel navigation flex mode="waterfall">
+        <core-toolbar>Trackary</core-toolbar>
+        <core-menu>
+          <core-item icon="store" label="Store">
+            <a href="/#/store"></a>
+          </core-item>
+          <core-item icon="custom-icons:loyalty" label="Rewards">
+            <a href="/#/rewards"></a>
+          </core-item>
+          <core-item icon="settings" label="Settings">
+            <a href="/#/settings"></a>
+          </core-item>
+        </core-menu>
+      </core-header-panel>
+      <div tool>
+        <content select=".title"></content>
+      </div>
+      <content></content>
+    </core-scaffold>
+  </template>
+</polymer-element>
