@@ -45,6 +45,9 @@ gem 'sass-rails', '~> 4.0.3'
 # Use bourbon Sass mixins
 gem 'bourbon'
 
+# Use neat for grid layout
+gem 'neat'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
