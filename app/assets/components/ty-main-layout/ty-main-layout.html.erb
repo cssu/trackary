@@ -1,20 +1,16 @@
-<!--suppress HtmlUnknownAttribute, HtmlUnknownTag, HtmlUnknownAnchorTarget -->
-<polymer-element name="main-layout" noscript>
+<!--suppress HtmlUnknownAttribute, HtmlUnknownTag, HtmlUnknownTarget -->
+<polymer-element name="ty-main-layout">
   <template>
     <link href="ty-main-layout.css.scss" rel="stylesheet">
     <core-scaffold>
       <core-header-panel navigation flex mode="waterfall">
         <core-toolbar class="app-title">Trackary</core-toolbar>
         <core-menu>
-          <core-item icon="store" label="Store">
-            <a href="/#/store"></a>
-          </core-item>
-          <core-item icon="custom-icons:loyalty" label="Rewards">
-            <a href="/#/rewards"></a>
-          </core-item>
-          <core-item icon="settings" label="Settings">
-            <a href="/#/settings"></a>
-          </core-item>
+          <template repeat="{{item in menuItems}}">
+            <core-item icon="{{item.icon}}" label="{{item.label}}">
+              <a href="{{item.link}}"></a>
+            </core-item>
+          </template>
         </core-menu>
       </core-header-panel>
       <div tool>
@@ -23,4 +19,5 @@
       <content></content>
     </core-scaffold>
   </template>
+  <script src="ty-main-layout.js"></script>
 </polymer-element>
