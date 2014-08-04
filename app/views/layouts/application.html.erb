@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
 
+  <%# Enable Add to Homescreen on Android %>
+  <meta name="mobile-web-app-capable" content="yes">
+
   <%# Force IE to display the page using the highest mode possible, and prevent IE from using Compatibility Mode %>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -14,9 +17,11 @@
   <title>Trackary</title>
 
   <%# favicon & social media images %>
-  <%= favicon_link_tag 'favicon.ico' %>
-  <%= favicon_link_tag 'apple-touch-icon-precomposed.png', rel: 'apple-touch-icon', type: 'image/png' %>
-  <%= favicon_link_tag 'social-media-logo.png', rel: 'image_src', type: 'image/png' %>
+  <%= tag 'link', rel: 'icon', href: image_path('favicon.ico') %>
+  <%= tag 'link', rel: 'icon', sizes: '196x196`', href: image_path('android-icon.png') %>
+  <%= tag 'link', rel: 'apple-touch-icon', sizes: '152x152', href: image_path('apple-touch-icon-precomposed.png') %>
+
+  <%= tag 'link', rel: 'image_src', href: image_path('social-media-logo.png') %>
 
   <%# Include styles from 'application.css' and controller-specific styles %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
