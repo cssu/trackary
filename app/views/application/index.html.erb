@@ -3,11 +3,12 @@
   <%# Routes %>
   <app-router trailingSlash="ignore">
     <app-route
-        path="/"
+        path="/signin"
         element="ty-signin-register"
-        label="Sign In / Register"
+        label="Sign in / Register"
         icon="lock"
         showInSidebar="true">
+    </app-route>
     </app-route>
     <app-route
         path="/store"
@@ -25,7 +26,7 @@
     </app-route>
     <app-route
         path="*"
-        element="ty-signin-register"
+        element="ty-store"
         showInSidebar="false">
     </app-route>
   </app-router>
