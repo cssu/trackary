@@ -1,0 +1,10 @@
+@import "mixins";
+
+core-toolbar.app-title {
+  background-color: $primary-color-light;
+}
+
+//noinspection CssInvalidPseudoSelector
+core-scaffold::shadow core-toolbar {
+  background-color: $primary-color-base;
+}

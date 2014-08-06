@@ -2,10 +2,18 @@
 <polymer-element name="ty-signin-register" noscript>
   <template>
     <link href="ty-signin-register.css.scss" rel="stylesheet">
-    <main-layout>
-      <span class="title">Sign in / Register</span>
-      <paper-button class="button" label="Sign in"></paper-button>
-      <paper-button class="button" label="Register"></paper-button>
-    </main-layout>
+    <section class="container" layout vertical>
+      <paper-input
+          label="Email Address"
+          floatingLabel="true"
+          autofocus="true">
+      </paper-input>
+      <paper-input
+          type="password"
+          label="Password"
+          floatingLabel="true">
+      </paper-input>
+      <paper-button class="button" label="Sign in / Register"></paper-button>
+    </section>
   </template>
 </polymer-element>

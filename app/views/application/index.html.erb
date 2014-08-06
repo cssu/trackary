@@ -1,10 +1,32 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
-<%# Routes %>
-<app-router>
-  <app-route path="/" element="ty-signin-register"></app-route>
-  <app-route path="/store" element="ty-store"></app-route>
-  <app-route path="/signin" element="ty-signin"></app-route>
-  <app-route path="/register" element="ty-register"></app-route>
-  <app-route path="/settings" element="ty-settings"></app-route>
-  <app-route path="*" element="ty-signin-register"></app-route>
-</app-router>
+<ty-main-layout>
+  <%# Routes %>
+  <app-router trailingSlash="ignore">
+    <app-route
+        path="/signin"
+        element="ty-signin-register"
+        label="Sign in / Register"
+        icon="lock"
+        showInSidebar="true">
+    </app-route>
+    <app-route
+        path="/store"
+        element="ty-store"
+        label="Store"
+        icon="store"
+        showInSidebar="true">
+    </app-route>
+    <app-route
+        path="/settings"
+        element="ty-settings"
+        label="Settings"
+        icon="settings"
+        showInSidebar="true">
+    </app-route>
+    <app-route
+        path="*"
+        element="ty-store"
+        showInSidebar="false">
+    </app-route>
+  </app-router>
+</ty-main-layout>
