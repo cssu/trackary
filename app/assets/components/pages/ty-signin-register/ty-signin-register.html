@@ -1,7 +1,9 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
-<polymer-element name="ty-signin-register" noscript>
+<polymer-element name="ty-signin-register">
   <template>
     <link href="ty-signin-register.css.scss" rel="stylesheet">
+    <polymer-devise id="devise"
+                    on-new-registration="{{handleNewRegistration}}"></polymer-devise>
     <section class="container" layout vertical>
       <paper-input
           label="Email Address"
