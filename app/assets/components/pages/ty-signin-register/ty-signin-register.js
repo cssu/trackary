@@ -8,7 +8,6 @@ Polymer('ty-signin-register', {
   },
 
   onSignInClick: function () {
-    debugger;
     var email = this.$.email.value;
     var password = this.$.password.value;
 

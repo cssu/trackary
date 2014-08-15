@@ -17,11 +17,11 @@
     "core-ajax": "Polymer/core-ajax#~0.3.5",
     "chai-as-promised": "~4.1.1"
   },
-  "_release": "70fa8b02ad",
+  "_release": "7f82dee6a9",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "70fa8b02ada541a76a8506440640087a2126b874"
+    "commit": "7f82dee6a9bbc32d50b730de578099738744b8a4"
   },
   "_source": "git://github.com/cssu/polymer-devise.git",
   "_target": "*",
