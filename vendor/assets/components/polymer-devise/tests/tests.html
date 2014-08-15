@@ -1,0 +1,191 @@
+<link rel="import" href="../../polymer-test-tools/tools.html">
+
+<script src="../../polymer-test-tools/mocha-htmltest.js"></script>
+<script src="../../chai-as-promised/lib/chai-as-promised.js"></script>
+<script src="../vendor/sinon-1.10.3.js"></script>
+
+<link rel="import" href="../polymer-devise.html">
+
+<script>
+
+  mocha.setup({ui: 'tdd', slow: 1000, timeout: 5000, htmlbase: ''});
+
+  /**
+   * Test that polymer-devise behaves properly when declared in HTML
+   */
+  htmlSuite('HTML tests', function() {
+    htmlTest('polymer-devise-default-configuration.html');
+    htmlTest('polymer-devise-can-configure.html');
+    htmlTest('polymer-devise-global-state.html');
+  });
+
+  /**
+   * Test that polymer-devise functions properly, creating the element via JavaScript
+   */
+  suite('Service tests', function () {
+
+    suite('#login', function () {
+      var xhr,
+          devise,
+          requests;
+
+      setup(function () {
+        devise = document.createElement('polymer-devise');
+        document.body.appendChild(devise);
+
+        xhr = sinon.useFakeXMLHttpRequest();
+        requests = [];
+        xhr.onCreate = function (xhr) {
+          requests.push(xhr);
+        };
+      });
+
+      teardown(function () {
+        xhr.restore();
+      });
+
+      test('POSTS to /users/sign_in.json by default', function (done) {
+
+      });
+
+      test('POSTS to the configured path', function () {
+
+      });
+
+      test('Uses the configured HTTP method', function (done) {
+
+      });
+
+      test('Rejects with an error message upon failing to login', function (done) {
+
+      });
+
+      test('Fires "login" upon successful login', function (done) {
+
+      });
+
+      test('Fires "new-session" upon restoring an existing server session', function (done) {
+
+      });
+
+    });
+
+    suite('#logout', function () {
+      var xhr,
+          devise,
+          requests;
+
+      setup(function () {
+        devise = document.createElement('polymer-devise');
+        document.body.appendChild(devise);
+
+        xhr = sinon.useFakeXMLHttpRequest();
+        requests = [];
+        xhr.onCreate = function (xhr) {
+          requests.push(xhr);
+        };
+      });
+
+      teardown(function () {
+        xhr.restore();
+      });
+
+      test('DELETES to /users/sign_out.json by default', function (done) {
+
+      });
+
+      test('DELETES to the configured path', function () {
+
+      });
+
+      test('Uses the configured HTTP method', function (done) {
+
+      });
+
+      test('Rejects with an error message upon failing to logout', function (done) {
+
+      });
+
+      test('Fires "logout" upon successful logout', function (done) {
+
+      });
+
+    });
+
+    suite('#register', function () {
+      var xhr,
+          devise,
+          requests;
+
+      setup(function () {
+        devise = document.createElement('polymer-devise');
+        document.body.appendChild(devise);
+
+        xhr = sinon.useFakeXMLHttpRequest();
+        requests = [];
+        xhr.onCreate = function (xhr) {
+          requests.push(xhr);
+        };
+      });
+
+      teardown(function () {
+        xhr.restore();
+      });
+
+      test('POSTS to /users.json by default', function (done) {
+        var credentials = {
+          email: 'user@domain.com',
+          password: 'password1',
+          password_confirmation: 'password1'
+        };
+
+        // Call #register()
+        assert.becomes(devise.register(credentials), {
+          id: 1,
+          name: 'test',
+          email: 'user@domain.com'
+        }, 'resolves with registered user').notify(done);
+
+        assert.lengthOf(requests, 1,
+            'a request has been made');
+        assert.equal(requests[0].method, 'POST',
+            'the request is using POST');
+        assert.equal(requests[0].url, '/users.json',
+            'the request is using the correct default path');
+        assert.deepEqual(requests[0].requestBody, {user: credentials},
+            'the request body should match the passed credentials');
+
+        requests[0].respond(200, null, '{"id": 1, "name": "test", "email": "user@domain.com"}');
+      });
+
+      test('POSTS to the configured path', function () {
+        // Set a custom path
+        devise.setAttribute('registerPath', '/user/sign_up.json');
+
+        // Call #register()
+        devise.register(credentials).then(function (registeredUser) {
+          console.log(registeredUser); // => {id: 1, ect: '...'}
+        }, function (error) {
+          // Registration failed...
+        });
+      });
+
+      test('Uses the configured HTTP method', function (done) {
+
+      });
+
+      test('Rejects with an error message upon failing to register', function (done) {
+
+      });
+
+      test('Fires "new-registration" upon successful registration', function (done) {
+
+      });
+
+    });
+
+  });
+
+  mocha.run();
+
+</script>
