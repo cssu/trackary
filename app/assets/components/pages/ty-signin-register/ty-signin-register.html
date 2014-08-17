@@ -1,19 +1,28 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag -->
-<polymer-element name="ty-signin-register" noscript>
+<polymer-element name="ty-signin-register">
   <template>
     <link href="ty-signin-register.css.scss" rel="stylesheet">
+    <polymer-devise
+        id="devise"
+        on-new-registration="{{handleNewRegistration}}"></polymer-devise>
     <section class="container" layout vertical>
       <paper-input
+          id="email"
           label="Email Address"
           floatingLabel="true"
           autofocus="true">
       </paper-input>
       <paper-input
+          id="password"
           type="password"
           label="Password"
           floatingLabel="true">
       </paper-input>
-      <paper-button class="button" label="Sign in / Register"></paper-button>
+      <paper-button
+          class="button"
+          label="Sign in / Register"
+          on-click="{{onSignInClick}}"></paper-button>
     </section>
   </template>
+  <script src="ty-signin-register.js"></script>
 </polymer-element>

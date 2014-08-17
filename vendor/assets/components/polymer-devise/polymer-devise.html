@@ -1,0 +1,30 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-ajax/core-ajax.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <polymer-devise></polymer-devise>
+
+@element polymer-devise
+@blurb A Polymer element to interact with Devise authentication
+@status alpha
+@homepage https://github.com/elliottsj/polymer-devise/
+-->
+<polymer-element name="polymer-devise">
+  <template>
+    <core-ajax id="loginAjax"
+               method="{{loginMethod}}"
+               url="{{loginPath}}"
+               contentType="application/json"
+               handleAs="json"></core-ajax>
+    <core-ajax id="registerAjax"
+               method="{{registerMethod}}"
+               url="{{registerPath}}"
+               contentType="application/json"
+               handleAs="json"></core-ajax>
+  </template>
+  <script src="polymer-devise.js"></script>
+</polymer-element>
