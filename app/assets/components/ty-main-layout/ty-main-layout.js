@@ -1,6 +1,6 @@
 Polymer('ty-main-layout', {
   ready: function() {
-    this.menuItems = Array.prototype.filter.call(this.querySelectorAll('app-route'), function(appRoute) {
+    this.menuItems = Array.prototype.filter.call(this.querySelectorAll('app-route'), function (appRoute) {
       return appRoute.getAttribute('showInSidebar') === 'true';
     }).map(function (appRoute) {
       return {
