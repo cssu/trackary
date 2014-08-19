@@ -1,4 +1,36 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag, HtmlUnknownTarget -->
+<!--
+Polymer wrapper around <app-router>:
+
+<https://github.com/erikringsmuth/app-router>
+
+##### Example
+
+<ty-router>
+  <ty-route
+      path="/signin"
+      element="ty-signin-register"
+      label="Sign in / Register"
+      icon="lock"
+      topLevel="true">
+  </ty-route>
+  <ty-route
+      path="/settings"
+      element="ty-settings"
+      label="Settings"
+      icon="settings"
+      topLevel="true">
+  </ty-route>
+  <ty-route
+      path="*"
+      element="ty-signin"
+      topLevel="false">
+  </ty-route>
+</ty-router>
+
+@element ty-router
+@blurb A Polymer element to wrapping app-router
+-->
 <polymer-element name="ty-router">
   <template>
     <template if="{{initialized}}">

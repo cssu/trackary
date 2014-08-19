@@ -8,9 +8,12 @@
     <core-scaffold>
       <core-header-panel navigation flex mode="waterfall">
         <core-toolbar class="app-title">Trackary</core-toolbar>
-        <core-menu id="menu">
+        <core-menu valueattr="path" selected="{{activeRoute.path}}">
           <template repeat="{{route in topLevelRoutes}}">
-            <core-item icon="{{route.icon}}" label="{{route.label}}">
+            <core-item
+                path="{{route.path}}"
+                icon="{{route.icon}}"
+                label="{{route.label}}">
               <a href="{{route.hashPath}}"></a>
             </core-item>
           </template>
