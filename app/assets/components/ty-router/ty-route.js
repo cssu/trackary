@@ -1,14 +1,10 @@
-(function () {
+Polymer('ty-route', {
 
-  Polymer('ty-route', {
+  get hashPath() {
+    return '/#' + this.path;
+  },
 
-    get hashPath() {
-      return '/#' + this.path;
-    },
+  ready: function() {
+  }
 
-    ready: function() {
-    }
-
-  });
-
-}());
+});
