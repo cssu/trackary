@@ -7,6 +7,7 @@
 
     get activeRoute() {
       var appRoute = this.querySelector('::shadow app-route[active]');
+      if (!appRoute) return;
       var path = appRoute.getAttribute('path');
       return _.find(this.routes, function (route) {
         return route.path === path;
@@ -20,12 +21,6 @@
       this.initialized = true;
     },
 
-    domReady: function () {
-//      this.querySelector('::shadow app-router').addEventListener('state-change', function () {
-//        debugger;
-//      });
-    },
-
     getTopLevelRoutes: function () {
       return _.filter(this.routes, function (route) {
         return route.topLevel === 'true';
@@ -33,7 +28,9 @@
     },
 
     handleStateChange: function () {
-      debugger;
+      this.async(function () {
+        this.asyncFire('route-change', this.activeRoute);
+      }, null, 0);
     }
 
   });

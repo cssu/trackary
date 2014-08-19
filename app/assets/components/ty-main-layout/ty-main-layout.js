@@ -5,13 +5,12 @@ Polymer('ty-main-layout', {
     this.activePath = this.$.router.activeRoute.hashPath;
   },
 
-  observe: {
-    '$.router.activeRoute.hashPath': 'handleRouteChange'
-  },
-
-  handleRouteChange: function (event, hashPath, sender) {
+  handleRouteChange: function (event, route, sender) {
     debugger;
-    this.activePath = hashPath;
+    this.activeRoute = route;
+    this.$.menu.selected = _.findIndex(this.$.menu.querySelectorAll('a'), function (a) {
+      return a.getAttribute('href') === route.hashPath;
+    });
   }
 
 });
