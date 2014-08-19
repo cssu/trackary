@@ -1,14 +1,17 @@
 Polymer('ty-main-layout', {
-  ready: function() {
+
+  domReady: function() {
     this.topLevelRoutes = this.$.router.getTopLevelRoutes();
-//    this.menuItems = Array.prototype.filter.call(this.querySelectorAll('app-route'), function (appRoute) {
-//      return appRoute.getAttribute('showInSidebar') === 'true';
-//    }).map(function (appRoute) {
-//      return {
-//        icon: appRoute.getAttribute('icon'),
-//        label: appRoute.getAttribute('label'),
-//        link: '/#' + appRoute.getAttribute('path')
-//      };
-//    });
+    this.activePath = this.$.router.activeRoute.hashPath;
+  },
+
+  observe: {
+    '$.router.activeRoute.hashPath': 'handleRouteChange'
+  },
+
+  handleRouteChange: function (event, hashPath, sender) {
+    debugger;
+    this.activePath = hashPath;
   }
+
 });

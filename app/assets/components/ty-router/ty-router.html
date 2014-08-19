@@ -1,13 +1,17 @@
 <!--suppress HtmlUnknownAttribute, HtmlUnknownTag, HtmlUnknownTarget -->
 <polymer-element name="ty-router">
   <template>
-    <app-router trailingSlash="ignore">
-      <template repeat="{{route in routes}}">
-        <app-route
-            path="{{route.path}}"
-            element="{{route.element}}"></app-route>
-      </template>
-    </app-router>
+    <template if="{{initialized}}">
+      <app-router
+          trailingSlash="ignore"
+          on-state-change="{{handleStateChange}}">
+        <template repeat="{{route in routes}}">
+          <app-route
+              path="{{route.path}}"
+              element="{{route.element}}"></app-route>
+        </template>
+      </app-router>
+    </template>
   </template>
   <script src="ty-router.js"></script>
 </polymer-element>
