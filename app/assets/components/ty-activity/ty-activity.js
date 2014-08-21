@@ -1,0 +1,1 @@
+Polymer('ty-activity', {});

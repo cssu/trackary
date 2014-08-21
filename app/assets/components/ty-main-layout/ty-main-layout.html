@@ -5,25 +5,43 @@
     <ty-router
         id="router"
         on-route-change="{{handleRouteChange}}"></ty-router>
-    <core-scaffold>
-      <core-header-panel navigation flex mode="waterfall">
-        <core-toolbar class="app-title">Trackary</core-toolbar>
-        <core-menu valueattr="path" selected="{{activeRoute.path}}">
-          <template repeat="{{route in topLevelRoutes}}">
-            <core-item
-                path="{{route.path}}"
-                icon="{{route.icon}}"
-                label="{{route.label}}">
-              <a href="{{route.hashPath}}"></a>
-            </core-item>
-          </template>
-        </core-menu>
-      </core-header-panel>
-      <div tool>
-        <content select=".title"></content>
+
+    <core-drawer-panel id="drawerPanel" narrow="{{narrow}}">
+
+      <div drawer layout vertical>
+        <core-header-panel flex mode="waterfall">
+          <core-toolbar app-title>Trackary</core-toolbar>
+          <core-menu
+              valueattr="path"
+              selected="{{activePath}}"
+              on-core-activate="{{closeDrawer}}">
+            <template repeat="{{route in topLevelRoutes}}">
+              <core-item
+                  path="{{route.path}}"
+                  icon="{{route.icon}}"
+                  label="{{route.label}}">
+                <a href="{{route.hashPath}}"></a>
+              </core-item>
+            </template>
+          </core-menu>
+        </core-header-panel>
       </div>
-      <content></content>
-    </core-scaffold>
+
+      <core-header-panel main mode="seamed">
+        <core-toolbar action-bar>
+          <paper-icon-button id="menuButton" icon="menu" on-tap="{{togglePanel}}"></paper-icon-button>
+          <div>
+            <content select="[tool]"></content>
+          </div>
+        </core-toolbar>
+
+        <content></content>
+
+      </core-header-panel>
+
+    </core-drawer-panel>
+
   </template>
   <script src="ty-main-layout.js"></script>
+
 </polymer-element>

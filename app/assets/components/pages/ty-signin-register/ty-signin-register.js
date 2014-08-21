@@ -1,4 +1,7 @@
 Polymer('ty-signin-register', {
+
+  activityTitle: 'Sign In',
+
   ready: function () {
 
   },
