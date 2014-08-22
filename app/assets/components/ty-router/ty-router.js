@@ -1,6 +1,7 @@
 (function () {
 
   var _routes = [];
+  var _redirects = [];
 
   Polymer('ty-router', {
 
@@ -12,16 +13,25 @@
      */
     routes: _routes,
 
+    /**
+     * Shared set of redirects; routes that redirect to another route
+     *
+     * @property redirects
+     * @type {array}
+     */
+    redirects: _redirects,
+
     activityTitle: '',
 
     ready: function() {
       _.forEach(this.querySelectorAll('ty-route'), function (route) {
-        _routes.push(route);
+        if (route.redirect)
+          _redirects.push(route);
+        else
+          _routes.push(route);
       });
       this.initialized = true;
     },
-
-
 
     /**
      * Get the set of top-level routes (i.e. <ty-route topLevel="true">)
@@ -44,6 +54,22 @@
       return _.find(this.routes, function (route) {
         return route.path === path;
       });
+    },
+
+    /**
+     * Handle when the underlying <app-router> cannot find a valid route
+     *
+     * @param event
+     * @param detail
+     */
+    handleRedirect: function (event, detail) {
+      this.appRouter = this.appRouter || this.querySelector('::shadow app-router');
+      var path = detail.path;
+      var route = _.find(this.redirects, function (route) {
+        return this.appRouter.testRoute(route.path, path, 'ignore', false);
+      }, this);
+      if (route)
+        window.location.hash = route.redirect;
     },
 
     /**
