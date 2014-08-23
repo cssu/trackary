@@ -12,16 +12,16 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.4",
-    "polymer-test-tools": "Polymer/polymer-test-tools#~0.3.3",
+    "polymer": "Polymer/polymer#~0.3.5",
+    "polymer-test-tools": "Polymer/polymer-test-tools#~0.3.5",
     "core-ajax": "Polymer/core-ajax#~0.3.5",
     "chai-as-promised": "~4.1.1"
   },
-  "_release": "56c00c398e",
+  "_release": "990b0b81af",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "56c00c398e0fe3034507f2864831e61ef76466da"
+    "commit": "990b0b81af5288bf01d5d6bd80c542fc80d00a86"
   },
   "_source": "git://github.com/cssu/polymer-devise.git",
   "_target": "*",

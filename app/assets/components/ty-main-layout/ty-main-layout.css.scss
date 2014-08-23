@@ -1,10 +1,28 @@
 @import "mixins";
 
-core-toolbar.app-title {
+:host {
+  display: block;
+}
+
+[app-title] {
   background-color: $primary-color-light;
 }
 
-//noinspection CssInvalidPseudoSelector
-core-scaffold::shadow core-toolbar {
+[action-bar] {
+  color: #FFFFFF;
   background-color: $primary-color-base;
+}
+
+[drawer] {
+  background-color: #FFFFFF;
+  box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+
+[main] {
+  height: 100%;
+  background-color: #EEEEEE;
+}
+
+#drawerPanel:not([narrow]) #menuButton {
+  display: none;
 }

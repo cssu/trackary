@@ -36,7 +36,8 @@ Polymer wrapper around <app-router>:
     <template if="{{initialized}}">
       <app-router
           trailingSlash="ignore"
-          on-state-change="{{handleStateChange}}">
+          on-not-found="{{handleRedirect}}"
+          on-activate-route-end="{{handleActivateRoute}}">
         <template repeat="{{route in routes}}">
           <app-route
               path="{{route.path}}"

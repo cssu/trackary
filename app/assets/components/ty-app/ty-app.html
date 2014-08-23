@@ -1,0 +1,41 @@
+<!--suppress HtmlUnknownAttribute, HtmlUnknownTag, HtmlUnknownTarget -->
+<polymer-element name="ty-app">
+  <template>
+
+    <ty-main-layout>
+      <ty-router
+          id="router"
+          on-route-change="{{handleRouteChange}}">
+        <ty-route
+            path="/signin"
+            element="ty-signin-register"
+            label="Sign in / Register"
+            icon="lock"
+            topLevel="true">
+        </ty-route>
+        <ty-route
+            path="/store"
+            element="ty-store"
+            label="Store"
+            icon="store"
+            topLevel="true">
+        </ty-route>
+        <ty-route
+            path="/settings"
+            element="ty-settings"
+            label="Settings"
+            icon="settings"
+            topLevel="true">
+        </ty-route>
+        <ty-route
+            path="*"
+            redirect="/store"
+            topLevel="false">
+        </ty-route>
+      </ty-router>
+      <span tool>{{$.router.activityTitle}}</span>
+    </ty-main-layout>
+
+  </template>
+  <script src="ty-app.js"></script>
+</polymer-element>

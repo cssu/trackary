@@ -1,4 +1,7 @@
 Polymer('ty-signin-register', {
+
+  activityTitle: 'Sign In',
+
   ready: function () {
 
   },
@@ -18,7 +21,7 @@ Polymer('ty-signin-register', {
     }).then(function (registeredUser) {
       console.info('registeredUser:', registeredUser);
     }, function (error) {
-      console.error(error);
+      console.error('registration error:', error);
     });
   }
 });
