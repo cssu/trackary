@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # Ruby on Rails!
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 
 group :development, :test do
   # Use rspec for testing (instead of the default Test:Unit)
@@ -51,9 +51,6 @@ gem 'neat'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -62,6 +59,9 @@ gem 'high_voltage'
 
 # Use emcee for web components
 gem 'emcee'
+
+# Use formtastic for HTML form generation
+gem 'formtastic'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
