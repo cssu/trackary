@@ -12,14 +12,11 @@ group :development, :test do
 end
 
 group :test do
-  # Use minitest-rails to enable the spec DSL
-  gem 'minitest-rails'
+  # Use minitest-spec-rails to enable the spec DSL
+  gem 'minitest-spec-rails'
 
-  # RubyMine requires minitest-reporters. See: http://www.jetbrains.com/ruby/webhelp/minitest.html
-  gem 'minitest-reporters', '>= 0.5.0'
-
-  # Minitest capybara integration
-  gem 'minitest-rails-capybara'
+  # Use capybara to simulate user interaction
+  gem 'capybara'
 end
 
 group :production do
