@@ -7,23 +7,19 @@ ruby '2.1.2'
 gem 'rails', '4.1.5'
 
 group :development, :test do
-  # Use rspec for testing (instead of the default Test:Unit)
-  gem 'rspec-rails'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # Add the `spring rspec` command
-  gem 'spring-commands-rspec'
-
-  # Use guard to run tests automatically. Only needed for command line; don't need to automatically `require`
-  gem 'guard-rspec', '~> 4.2.9', require: false
 end
 
 group :test do
-  # Use capybara + selenium for simulating user interaction
-  gem 'selenium-webdriver'
-  gem 'capybara'
+  # Use minitest-rails to enable the spec DSL
+  gem 'minitest-rails'
+
+  # RubyMine requires minitest-reporters. See: http://www.jetbrains.com/ruby/webhelp/minitest.html
+  gem 'minitest-reporters', '>= 0.5.0'
+
+  # Minitest capybara integration
+  gem 'minitest-rails-capybara'
 end
 
 group :production do
@@ -68,9 +64,6 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Allows manually setting request timeout
 gem 'rack-timeout'
