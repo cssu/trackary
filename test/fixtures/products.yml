@@ -1,16 +1,16 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  description: MyText
-  price: 1
-  reward_points_cost: 1
-  product_category: 
+kitkat:
+  name: Kit Kat
+  description: Take a break
+  price: 100
+  reward_points_cost: 100
+  product_category: snacks
 
-two:
-  name: MyString
-  description: MyText
-  price: 1
-  reward_points_cost: 1
-  product_category: 
+arizona:
+  name: Arizona Half & Half
+  description: Half lemonade, half iced tea
+  price: 150
+  reward_points_cost: 150
+  product_category: drinks

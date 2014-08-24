@@ -1,0 +1,7 @@
+drinks:
+  name: Drinks
+  description: Consumable liquid
+
+snacks:
+  name: Snacks
+  description: Consumable solid
