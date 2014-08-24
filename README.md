@@ -3,6 +3,9 @@ trackary
 
 Inventory tracking & point-of-sale for the CSSU
 
+[![Code Climate](https://codeclimate.com/github/cssu/trackary/badges/gpa.svg)](https://codeclimate.com/github/cssu/trackary)
+[![Test Coverage](https://codeclimate.com/github/cssu/trackary/badges/coverage.svg)](https://codeclimate.com/github/cssu/trackary)
+
 ### Overview
 
 This is a Ruby on Rails app, consisting of four main components:
