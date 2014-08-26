@@ -50,9 +50,6 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Use High Voltage for static pages
-gem 'high_voltage'
-
 # Use emcee for web components
 gem 'emcee'
 
