@@ -1,0 +1,18 @@
+<% content_for :stylesheet_links do %>
+  <%# Include styles from 'classic.css' %>
+  <%= stylesheet_link_tag 'classic', media: 'all', 'data-turbolinks-track' => true %>
+<% end %>
+<% content_for :javascript_links do %>
+  <%# Include javascript from 'classic.js' %>
+  <%= javascript_include_tag 'classic', 'data-turbolinks-track' => true %>
+<% end %>
+<% content_for :content do %>
+  <nav>
+    <ul>
+      <li><%= link_to 'Store', root_path %></li>
+      <li><%= link_to user_label, user_path %></li>
+    </ul>
+  </nav>
+  <%= yield %>
+<% end %>
+<%= render template: 'layouts/application' %>

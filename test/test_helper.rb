@@ -8,6 +8,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+
+  # Devise test helpers for user authentication
+  include Devise::TestHelpers
 end
