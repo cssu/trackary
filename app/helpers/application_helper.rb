@@ -7,7 +7,7 @@ module ApplicationHelper
   end
 
   def user_path
-    user_signed_in? ? current_user : new_user_session_path
+    user_signed_in? ? edit_user_registration_path : new_user_session_path
   end
 
 end

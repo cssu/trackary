@@ -9,6 +9,9 @@ gem 'rails', '4.1.5'
 group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Open emails in the browser instead of sending
+  gem 'letter_opener'
 end
 
 group :test do
