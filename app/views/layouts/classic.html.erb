@@ -10,7 +10,7 @@
   <nav>
     <ul>
       <li><%= link_to 'Store', root_path %></li>
-      <li><%= link_to user_label, user_path %></li>
+      <li><%= user_link %></li>
       <% if can? :read, User %>
         <li><%= link_to 'Users', admin_users_path %></li>
       <% end %>
