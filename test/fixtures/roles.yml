@@ -1,7 +1,5 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+administrator:
   name: MyString
 
-two:
+cashier:
   name: MyString
