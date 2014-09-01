@@ -1,5 +1,7 @@
 administrator:
-  name: MyString
+  id: 1
+  name: administrator
 
 cashier:
-  name: MyString
+  id: 2
+  name: cashier
