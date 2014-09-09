@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe Admin::UsersController do
 
-  describe 'admin user' do
+  describe 'Logged in as admin' do
     before do
       sign_in users(:an_admin_user)
     end
@@ -53,13 +53,11 @@ describe Admin::UsersController do
     end
   end
 
-
-
-
-  it 'should redirect non-admins to the previous page with a flash[:alert] message' do
-    get :index
-    assert_response :success
-
+  describe 'Not logged in' do
+    it 'should redirect non-admins to the previous page with a flash[:alert] message' do
+      get :index
+      assert_response :success
+    end
   end
 
 end
