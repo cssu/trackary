@@ -25,6 +25,9 @@ end
 group :production do
   # Direct logs to stdout and enable development/production parity
   gem 'rails_12factor'
+
+  # Use New Relic for monitoring
+  # gem 'newrelic_rpm'
 end
 
 group :doc do
@@ -67,9 +70,6 @@ gem 'rack-timeout'
 
 # Use puma as the app server
 gem 'puma'
-
-# Use New Relic for monitoring
-# gem 'newrelic_rpm'
 
 # Use MetaTags for search engine optimization
 gem 'meta-tags'
