@@ -38,6 +38,10 @@ end
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
