@@ -1,0 +1,7 @@
+administrator:
+  id: 1
+  name: administrator
+
+cashier:
+  id: 2
+  name: cashier

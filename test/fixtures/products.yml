@@ -1,0 +1,16 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+kitkat:
+  name: Kit Kat
+  description: Take a break
+  price: 100
+  reward_points_cost: 100
+  product_category: snacks
+
+arizona:
+  name: Arizona Half & Half
+  description: Half lemonade, half iced tea
+  price: 150
+  reward_points_cost: 150
+  product_category: drinks

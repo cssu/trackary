@@ -1,0 +1,7 @@
+an_admin_user:
+  user_id: 1
+  role_id: 1
+
+a_cashier_user:
+  user_id: 2
+  role_id: 2

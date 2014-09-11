@@ -18,27 +18,34 @@
   <%= favicon_link_tag 'apple-touch-icon-precomposed.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <%= favicon_link_tag 'social-media-logo.png', rel: 'image_src', type: 'image/png' %>
 
-  <%# Include styles from 'application.css' and controller-specific styles %>
+  <%# Include styles from 'application.css' %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <%# Include javascripts from 'application.js' and controller-specific scripts %>
+  <%# Any stylesheets linked by templates %>
+  <%= yield(:stylesheet_links) if content_for?(:stylesheet_links) %>
+
+  <%# Include javascripts from 'application.js' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%# Any javascripts linked by templates %>
+  <%= yield(:javascript_links) if content_for?(:javascript_links) %>
 
   <%# Import the 'application' html component %>
   <%= html_import_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
-
-  <%# Google fonts %>
-  <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
 <body unresolved touch-action="auto" fullbleed layout vertical>
 
-  <%# Yield the content %>
-  <%= yield %>
+  <ty-main-layout>
+    <%= render '/left_navigation' %>
+
+    <%# Yield the content %>
+    <%= yield %>
+  </ty-main-layout>
 
   <%# Google Analytics %>
-  <% if false  # Rails.env.production? %>
+  <% if Rails.env.production? %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
