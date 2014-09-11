@@ -3,7 +3,7 @@
     <%= f.input :email %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>
-    <%= f.input :roles %>
+    <%= f.input :roles, as: :check_boxes %>
   <% end %>
 
   <%= f.actions do %>
