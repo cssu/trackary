@@ -2,27 +2,16 @@
 <polymer-element name="ty-main-layout">
   <template>
     <link href="ty-main-layout.css.scss" rel="stylesheet">
-    <ty-router
-        id="router"
-        on-route-change="{{handleRouteChange}}"></ty-router>
-
     <core-drawer-panel id="drawerPanel" narrow="{{narrow}}">
 
       <div drawer layout vertical>
         <core-header-panel flex mode="waterfall">
           <core-toolbar app-title>Trackary</core-toolbar>
           <core-menu
-              valueattr="path"
-              selected="{{activePath}}"
-              on-core-activate="{{closeDrawer}}">
-            <template repeat="{{route in topLevelRoutes}}">
-              <core-item
-                  path="{{route.path}}"
-                  icon="{{route.icon}}"
-                  label="{{route.label}}">
-                <a href="{{route.hashPath}}"></a>
-              </core-item>
-            </template>
+              on-core-activate="{{closeDrawer}}"
+              valueattr="current-controller"
+              selected="true">
+            <content select="[nav-item]"></content>
           </core-menu>
         </core-header-panel>
       </div>
