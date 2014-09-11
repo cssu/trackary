@@ -1,0 +1,25 @@
+<core-item nav-item
+           current-controller="<%= 'true' if controller_name == 'products' %>"
+           icon="store"
+           label="Store">
+  <%= link_to '', root_path %>
+</core-item>
+<core-item nav-item
+           current-controller="<%= 'true' if controller_name == '' %>"
+           icon="settings"
+           label="Settings"></core-item>
+<% if user_signed_in? %>
+  <core-item nav-item
+             current-controller="<%= 'true' if controller_name == '' %>"
+             icon="lock"
+             label="Sign out">
+    <%= link_to '', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </core-item>
+<% else %>
+  <core-item nav-item
+             current-controller="<%= 'true' if controller_name == '' %>"
+             icon="lock"
+             label="Sign in / Register">
+    <%= link_to '', new_user_session_path %>
+  </core-item>
+<% end %>
