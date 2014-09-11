@@ -37,8 +37,8 @@ class Admin::UsersController < ApplicationController
   # PATCH/PUT /admin/users/1.json
   def update
     respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+      if @user.update_without_password(user_params)
+        format.html { redirect_to admin_user_path(@user), notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class Admin::UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to user_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to admin_users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
