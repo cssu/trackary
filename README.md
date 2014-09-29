@@ -3,8 +3,9 @@ trackary
 
 Inventory tracking & point-of-sale for the CSSU
 
-[![Code Climate](https://codeclimate.com/github/cssu/trackary/badges/gpa.svg)](https://codeclimate.com/github/cssu/trackary)
-[![Test Coverage](https://codeclimate.com/github/cssu/trackary/badges/coverage.svg)](https://codeclimate.com/github/cssu/trackary)
+[![Travis CI](http://img.shields.io/travis/cssu/trackary.svg?style=flat)](https://travis-ci.org/cssu/trackary)
+[![Code Climate](https://img.shields.io/codeclimate/github/cssu/trackary.svg?style=flat)](https://codeclimate.com/github/cssu/trackary)
+[![Test Coverage](https://img.shields.io/codeclimate/coverage/github/cssu/trackary.svg?style=flat)](https://codeclimate.com/github/cssu/trackary)
 
 ### Overview
 
