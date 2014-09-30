@@ -5,16 +5,12 @@
   <%= link_to '', root_path %>
 </core-item>
 <% if user_signed_in? %>
-  <core-submenu
-      nav-item
-      icon="settings"
-      label="Manage">
-    <core-item current-controller="<%= 'true' if controller_name == 'users' %>"
-               icon="people"
-               label="Users">
-      <%= link_to '', admin_users_path %>
-    </core-item>
-  </core-submenu>
+  <core-item nav-item
+             current-controller="<%= 'true' if controller_name == 'users' %>"
+             icon="social:people"
+             label="Manage Users">
+    <%= link_to '', admin_users_path %>
+  </core-item>
   <core-item nav-item
              icon="lock"
              label="Sign out">
