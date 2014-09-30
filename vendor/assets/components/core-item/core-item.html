@@ -34,7 +34,7 @@ Example:
 <template>
   <link rel="stylesheet" href="core-item.css">
   <template if="{{icon || src}}">
-    <core-icon src="{{src}}" id="icon" icon="{{icon}}" hidden?="{{!src && !icon}}"></core-icon>
+    <core-icon id="icon" icon="{{icon}}" hidden?="{{!src && !icon}}"></core-icon>
   </template>
   <div id="label">{{label}}</div>
   <content></content>
