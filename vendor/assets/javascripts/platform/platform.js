@@ -1,1 +1,0 @@
-../../components/platform/platform.js
