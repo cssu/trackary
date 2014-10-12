@@ -13,3 +13,6 @@
 
 # Ignore generated assets
 public/assets/
+
+# Lucky Marmot Paw
+*.paw
