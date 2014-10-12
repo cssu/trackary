@@ -1,26 +1,23 @@
-<core-item nav-item
-           current-controller="<%= 'true' if controller_name == 'products' %>"
-           icon="store"
-           label="Store">
+<paper-item nav-item
+            icon="store"
+            label="Store">
   <%= link_to '', root_path %>
-</core-item>
+</paper-item>
 <% if user_signed_in? %>
-  <core-item nav-item
-             current-controller="<%= 'true' if controller_name == 'users' %>"
-             icon="social:people"
-             label="Manage Users">
+  <paper-item nav-item
+              icon="social:people"
+              label="Manage Users">
     <%= link_to '', admin_users_path %>
-  </core-item>
-  <core-item nav-item
-             icon="lock"
-             label="Sign out">
+  </paper-item>
+  <paper-item nav-item
+              icon="lock"
+              label="Sign out">
     <%= link_to '', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </core-item>
+  </paper-item>
 <% else %>
-  <core-item nav-item
-             current-controller="<%= 'true' if controller_name == 'sessions' %>"
-             icon="lock"
-             label="Sign in / Register">
+  <paper-item nav-item
+              icon="lock"
+              label="Sign in / Register">
     <%= link_to '', new_user_session_path %>
-  </core-item>
+  </paper-item>
 <% end %>
