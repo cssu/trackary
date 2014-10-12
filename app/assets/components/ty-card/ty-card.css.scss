@@ -1,0 +1,9 @@
+@import "mixins";
+
+:host {
+  display: relative;
+}
+
+[title] {
+  background-color: $primary-color-light;
+}
