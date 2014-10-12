@@ -1,7 +1,12 @@
 @import "mixins";
 
 :host {
-  display: relative;
+  display: block;
+  position: relative;
+  margin: 16px;
+  padding: 16px;
+
+  background-color: #FFFFFF;
 }
 
 [title] {
